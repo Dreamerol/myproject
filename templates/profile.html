@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/images/library.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Online Books Library</title>
+</head>
+
+<body>
+    <div id="container">
+        <header id="site-header">
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <section class="navbar-dashboard">
+                    <a href="{% url 'home' %}">Dashboard</a>
+                    <div id="user">
+                        <span>Welcome, {{ profile.first_name }}</span>
+                        <a class="button" href="{% url 'add page' %}">Add Book</a>
+                        <a class="button" href="{% url 'profile' %}">Profile</a>
+                    </div>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Profile Page -->
+        <section id="profile-page" class="details">
+            <div class="profile-information">
+                <h3>{{ profile.first_name }} {{ profile.last_name }}</h3>
+                <p class="img"><img src="{{ profile.image_url }}" alt=""></p>
+                <div class="actions">
+                    <a class="button" href="{% url 'edit profile' %}">Edit</a>
+                    <a class="button" href="{% url 'delete profile' %}">Delete</a>
+                </div>
+            </div>
+        </section>
+
+        <footer id="site-footer">
+            <p>Python Web Basics Retake Exam @SoftUni</p>
+        </footer>
+    </div>
+</body>
+
+</html>

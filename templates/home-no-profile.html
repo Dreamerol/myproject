@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/images/library.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Online Books Library</title>
+</head>
+
+<body>
+    <div id="container">
+        <header id="site-header">
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <section class="navbar-dashboard">
+                    <a href="{% url 'home' %}">Dashboard</a>
+                </section>
+            </nav>
+        </header>
+
+     <!-- No Profile Page -->
+        <section id="register-page" class="register">
+            <form id="register-form" action="{% url 'create profile' %}" method="POST">
+                <fieldset>
+                    <legend>Profile Form</legend>
+                    {% csrf_token %}
+                    {{ form }}
+                    <input class="button submit" type="submit" value="Enter">
+                </fieldset>
+            </form>
+        </section>
+
+        <footer id="site-footer">
+            <p>Python Web Basics Retake Exam @SoftUni</p>
+        </footer>
+    </div>
+</body>
+
+</html>

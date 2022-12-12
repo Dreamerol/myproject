@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/images/library.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Online Books Library</title>
+</head>
+
+<body>
+    <div id="container">
+        <header id="site-header">
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <section class="navbar-dashboard">
+                    <a href="{% url 'home' %}">Dashboard</a>
+                    <div id="user">
+                        <span>Welcome, {{ profile.first_name }}</span>
+                        <a class="button" href="{% url 'add page' %}">Add Book</a>
+                        <a class="button" href="{% url 'profile' %}">Profile</a>
+                    </div>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Dashboard Page-->
+        <section id="dashboard-page" class="dashboard">
+            <h1>Dashboard</h1>
+             <!-- Display paragraph: If the user doesn't have any books  -->
+            {% if not books %}
+            <p class="no-books">No books in database!</p>
+            <!-- Display ul: with list-items for every books if any -->
+            {% endif %}
+            {% if books %}
+            <ul class="my-books-list">
+                <li class="myBooks">
+                {% for book in books %}
+                            <h3>{{ book.title }}</h3>
+                            <p>Type: {{ book.type }}</p>
+                            <p class="img"><img src="{{ book.image }}" alt=""></p>
+                            <a class="button" href="{% url 'page details' book.id %}">Details</a>
+                {% endfor %}
+                </li>
+
+                {% endif %}
+            </ul>
+        </section>
+
+        <footer id="site-footer">
+            <p>Python Web Basics Retake Exam @SoftUni</p>
+        </footer>
+    </div>
+</body>
+
+</html>

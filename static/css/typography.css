@@ -1,0 +1,56 @@
+html {
+	font: 12px/1.5 "PT Sans", "PT Serif Caption", "PT Serif";	
+}
+
+@media screen and (min-width: 500px) {
+	html { 
+		font-size: 14px;
+	 }
+}
+
+@media screen and (min-width: 700px) {
+	html { 
+		font-size: 16px;
+	 }
+}
+
+@media screen and (min-width: 1600px) {
+	html { 
+		font-size: 18px;
+	 }
+}
+
+body, table, th, td, form, input, textarea, option, select {
+	font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;	
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 2.0rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.6rem; }
+h5 { font-size: 1.4rem; }
+h6 { font-size: 1.2rem; }
+
+ul, ol {
+	padding-bottom: 1.5em;
+}
+
+ul, ol {
+	padding-left: 2em;
+}
+
+li {
+	list-style-position: inside;
+}
+blockquote {
+	width: 80%;
+	margin: 0 auto;
+	border-left: 4px solid #DDD;
+	font-style: italic;	
+	padding: 1rem 2rem;
+	position: relative;
+}

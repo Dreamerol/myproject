@@ -1,0 +1,225 @@
+body {
+    background-image: url("../images/background.jpg");
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.basic {
+    background: linear-gradient(rgba(250, 248, 248, 0.2), rgba(25, 167, 173, 0.2));
+    background-size: cover;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+}
+
+#site-content>section.basic {
+    text-align: center;
+}
+
+.login form,
+.register form,
+.create form, .edit form {
+    margin: 5rem auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    background: lightcoral;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+li {
+    list-style-type: none;
+}
+
+.fa-heart {
+    color: red;
+}
+
+.img {
+    width: 15rem;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+img {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img::after {
+    display: block;
+    content: "";
+    padding-top: 100%;
+}
+
+.detailsMyBooks,
+.deleteBook,
+.myBooks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailsMyBooks>p:nth-child(2),
+.deleteBook>p:nth-child(2),
+.myBooks>p:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.dashboard>nav>ul {
+    display: flex;
+
+}
+
+.dashboard>nav>ul li:not(:last-child) {
+    padding-right: 1rem;
+
+}
+
+.dashboard .navbar {
+    justify-content: center;
+}
+
+.basic h1,
+.dashboard h1 {
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0 1rem 0;
+}
+
+h3 {
+    margin-bottom: 0;
+    text-align: auto;
+}
+
+img.hearts {
+    width: 32px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+div.actions {
+    display: flex;
+    justify-content: center;
+}
+div.actions a {
+    margin-right: 10px;
+    height: 25px;
+}
+
+.deleteBook>form,
+.detailsMyBooks>form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.dashboard .my-books-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detailsMyBooks textarea {
+    margin-bottom: 2rem;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    background: #234465;
+}
+
+footer p {
+    padding: 1rem 0;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.no-books {
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+textarea#description {
+    height: 100px;
+    resize: none;
+}
+
+.myBooks {
+    border-radius: 10px;
+    text-align: center;
+    margin: 2rem;
+    position: relative;
+    width: 400px;
+    height: auto;
+    transition: all 0.3s cubic-bezier(.50, .80, .25, 1);
+    box-shadow: -8px -2px 28px -8px #000000;
+    align-items: center;
+}
+
+.myBooks:hover {
+    box-shadow: 30px 30px 100px 10px #000000;
+}
+
+#views {
+    display: none;
+}
+
+.details > .book-information > .img {
+    width: 60%;
+    align-items: center;
+}
+.details > .book-information > .button {
+    width: 30%;
+    text-align: center;
+}
+
+.details {
+    margin:  30px;
+}
+
+.likes {
+    font-size: 20px;
+    text-shadow:4px 4px 8px blue;
+    text-align: center;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/images/library.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Online Books Library</title>
+</head>
+
+<body>
+    <div id="container">
+        <header id="site-header">
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <section class="navbar-dashboard">
+                    <a href="{% url 'home' %}">Dashboard</a>
+                    <div id="user">
+                        <span>Welcome, {{ profile.first_name }}</span>
+                        <a class="button" href="{% url 'add page' %}">Add Book</a>
+                        <a class="button" href="{% url 'profile' %}">Profile</a>
+                    </div>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Details Page -->
+        <section id="details-page" class="details">
+            <div class="book-information">
+                <h3>{{ book.title }} </h3>
+                <p class="type">Type: {{ book.type }}</p>
+                <p class="img"><img src="{{ book.image }}" alt=""></p>
+                <div class="actions">
+                    <a class="button" href="{% url 'edit page' book.id %}">Edit</a>
+                    <a class="button" href="{% url 'delete page' book.id %}">Delete</a>
+                </div>
+            </div>
+            <div class="book-description">
+                <h3>Description:</h3>
+                <p>{{ book.description }}</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="site-footer">
+            <p>Python Web Basics Retake Exam @SoftUni</p>
+        </footer>
+    </div>
+</body>
+
+</html>

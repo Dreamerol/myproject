@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load placeholders %}
+<html lang="en">
+<!-- Starts Head Section -->
+<head>
+    <link rel="stylesheet"
+          href="/static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/images/library.jpg">
+    <title>Online library</title>
+</head>
+<!-- End Head Section -->
+
+<!-- Starts Body Section -->
+<body>
+
+<!-- Starts Header Section with Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <!-- Link to Home Page -->
+                <a href="{% url 'home' %}">
+
+                </a>
+
+                <!-- Link to Home Page -->
+                <a class="home" href="{% url 'home' %}">
+                    <i>Online Library</i>
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <ul class="nav-group">
+                    <li class="nav-item">
+
+                        <!-- Link to Add Pet Page -->
+                    </li>
+                    <li class="nav-item">
+
+                        <!-- Link to Add Photo Page -->
+                        <a href="{% url 'add page' %}">
+                            <i>Add Book</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+
+                        <!-- Link to Login Page -->
+                        <a href="{% url 'login user' %}">
+                            <i>Login</i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+
+                        <!-- Link to Register Page -->
+                        <a href="{% url 'register user' %}">
+                            <i>Register</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header Section with Navigation Bar -->
+
+<!-- Starts Main Section -->
+<main>
+
+    <!-- Start Register Section -->
+    <div class="login-register-div">
+        <div class="login-register-box">
+            <h1>Online Library</h1>
+
+            <!-- Start Register Form -->
+            <form method="post" action="{% url 'register user' %}">
+                {{ form.username|placeholder:'Username: ' }}
+                {{ form.email|placeholder:'Email: ' }}
+                {{ form.password1|placeholder:"Password: " }}
+                {{ form.password2|placeholder:"Repeat password: " }}
+
+                <!-- Register Button -->
+                <button type="submit">Register</button>
+                {% csrf_token %}
+            </form>
+            <!-- End Register Form -->
+
+        </div>
+        <div class="second-option">
+
+            <!-- Link to Login Page -->
+            <p>Have an account? <a href="{% url 'login user' %}">Log in</a></p>
+        </div>
+    </div>
+    <!-- End Register Section -->
+
+</main>
+<!-- End Main Section -->
+
+<!-- Start Footer Section -->
+<div class="footer">
+		<span class="footer-section">
+			© 2022 SOFTUNI WORKSHOP FOR PYTHON WEB MODULE
+		</span>
+</div>
+<!-- End Footer Section -->
+
+</body>
+</html>
